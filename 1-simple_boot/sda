@@ -1,0 +1,33 @@
+00000000  0000              add [rax],a;
+00000002  0000              add [rax],al
+*
+000001B6  0000              add [rax],al
+000001B8  6F                outsd
+000001B9  91                xchg eax,ecx
+000001BA  F3BE00000020      rep mov esi,0x20000000
+000001C0  2100              and [rax],eax
+000001C2  834B810A          or dword [rbx-0x7f],byte +0xa
+000001C6  0008              add [rax],cl
+000001C8  0000              add [rax],al
+000001CA  0000              add [rax],al
+000001CC  800000            add byte [rax],0x0
+000001CF  4B                rex.wxb
+000001D0  82                db 0x82
+000001D1  0A8360D10F00      or al,[rbx+0xfd160]
+000001D7  088000000040      or [rax+0x40000000],al
+000001DD  0000              add [rax],al
+000001DF  60                db 0x60
+000001E0  D20F              ror byte [rdi],cl
+000001E2  0569012800        add eax,0x280169
+000001E7  08C0              or al,al
+000001E9  0000              add [rax],al
+000001EB  E83F010000        call qword 0x32f
+000001F0  0000              add [rax],al
+000001F2  0000              add [rax],al
+000001F4  0000              add [rax],al
+000001F6  0000              add [rax],al
+000001F8  0000              add [rax],al
+000001FA  0000              add [rax],al
+000001FC  0000              add [rax],al
+000001FE  55                push rbp
+000001FF  AA                stosb
