@@ -3,24 +3,24 @@ print_hex:
 
   mov cl, dl
   and cl, 0x0F
-  mov ebx, 5
+  mov bx, 5
   call put_char
  
   mov cl, dl
   and cl, 0xF0
   shr cl, 4
-  mov ebx, 4
+  mov bx, 4
   call put_char
   
   mov cl, dh
   and cl, 0x0F
-  mov ebx, 3
+  mov bx, 3
   call put_char
   
   mov cl, dh
   and cl, 0xF0
   shr cl, 4
-  mov ebx, 2
+  mov bx, 2
   call put_char
   
   mov bx, HEX_OUT
