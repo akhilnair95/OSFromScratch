@@ -7,6 +7,7 @@ call print_hex
 jmp $
 
 %include "print_hex.asm"
+%include "print_string.asm"
 
 ; fill with 510 zeroes - size of previous code
 times 510-($-$$) db 0

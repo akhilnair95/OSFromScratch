@@ -1,4 +1,6 @@
 ; prints value of DX as hex
+; dependencies - print_string
+
 print_hex:
 
   mov cl, dl
@@ -25,8 +27,6 @@ print_hex:
   
   mov bx, HEX_OUT
   call print_string
-  
-%include "print_string.asm"
 
 ;puts ASCII of cl in itself
 put_char:
