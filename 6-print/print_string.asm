@@ -1,18 +1,18 @@
 ;prints String at address BX
 print_string:
-mov ah, 0x0e
+  mov ah, 0x0e
 
-beg:
+  beg:
 
-mov cl, [bx]
-cmp cl, 0
-je end
+   mov cl, [bx]
+   cmp cl, 0
+   je end
 
-mov al, cl
-int 10h
+   mov al, cl
+   int 10h
 
-add bx, 1
-jmp beg
+   add bx, 1
+   jmp beg
 
-end:
-ret
+  end:
+  ret
